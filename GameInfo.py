@@ -261,13 +261,19 @@ class Game:
             curcol = column + d[1]
             while 0 <= currow <= 7 and 0 <= curcol <= 7:
                 if self.white_move:
-                    if self.board[currow][curcol][0] in ['-', 'b']:
+                    if self.board[currow][curcol][0] == '-':
                         moves.append(Move((row, column), (currow, curcol), self.board))
+                    elif self.board[currow][curcol][0] == 'b':
+                        moves.append(Move((row, column), (currow, curcol), self.board))
+                        break
                     else:
                         break
                 else:
-                    if self.board[currow][curcol][0] in ['-', 'w']:
+                    if self.board[currow][curcol][0] == '-':
                         moves.append(Move((row, column), (currow, curcol), self.board))
+                    elif self.board[currow][curcol][0] == 'w':
+                        moves.append(Move((row, column), (currow, curcol), self.board))
+                        break
                     else:
                         break
                 currow += d[0]
@@ -297,13 +303,21 @@ class Game:
             curcol = column + d[1]
             while 0 <= currow <= 7 and 0 <= curcol <= 7:
                 if self.white_move:
-                    if self.board[currow][curcol][0] in ['-', 'b']:
+                    if self.board[currow][curcol][0] == '-':
                         moves.append(Move((row, column), (currow, curcol), self.board))
+
+                    elif self.board[currow][curcol][0] == 'b':
+                        moves.append(Move((row, column), (currow, curcol), self.board))
+                        break
                     else:
                         break
                 else:
-                    if self.board[currow][curcol][0] in ['-', 'w']:
+                    if self.board[currow][curcol][0] == '-':
                         moves.append(Move((row, column), (currow, curcol), self.board))
+
+                    elif self.board[currow][curcol][0] == 'w':
+                        moves.append(Move((row, column), (currow, curcol), self.board))
+                        break
                     else:
                         break
                 currow += d[0]
@@ -317,13 +331,19 @@ class Game:
             curcol = column + d[1]
             while 0 <= currow <= 7 and 0 <= curcol <= 7:
                 if self.white_move:
-                    if self.board[currow][curcol][0] in ['-', 'b']:
+                    if self.board[currow][curcol][0] == '-':
                         moves.append(Move((row, column), (currow, curcol), self.board))
+                    elif self.board[currow][curcol][0] == 'b':
+                        moves.append(Move((row, column), (currow, curcol), self.board))
+                        break
                     else:
                         break
                 else:
-                    if self.board[currow][curcol][0] in ['-', 'w']:
+                    if self.board[currow][curcol][0] == '-':
                         moves.append(Move((row, column), (currow, curcol), self.board))
+                    elif self.board[currow][curcol][0] == 'w':
+                        moves.append(Move((row, column), (currow, curcol), self.board))
+                        break
                     else:
                         break
                 currow += d[0]
